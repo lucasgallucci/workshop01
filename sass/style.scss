@@ -1,0 +1,218 @@
+@import "reset";
+@import "variables";
+@import "nav";
+
+.contenedor{
+	max-width:900px;
+	margin: auto;
+}
+
+
+header{
+	background: yellow;
+	padding: 50px 0;
+
+	h1{
+		font-family: $fuente-textos;
+		font-size: 50px;
+		text-transform: uppercase;
+		strong{
+			color: blue;
+		}
+	}
+
+	h3{
+		color: red;
+	}
+
+	a{
+		background: green;
+		color: white;
+		display: inline-block;
+		padding: 10px 30px;
+		text-decoration: none;
+		&:hover{
+			background: blue;
+		}
+	}
+}
+
+
+.seccion1{
+	h2{
+		text-align: center;
+		color: violet;
+	}
+
+	p{
+		display: inline-block;
+		width: 48%;
+		padding: 20px;
+		box-sizing:border-box;
+		&.destacado{
+			background: yellow;
+		}
+	}
+
+	a{
+		background: $primary-color;
+		display: inline-block;
+		padding: 10px 20px;
+		color: white;
+		transition: 1s;
+		&:hover{
+			background: $primary-color-dark;
+		}
+	}
+}
+
+
+.telefe{
+	article{
+		width: 200px;
+		height: 200px;
+		display: inline-block;
+		border-radius:50%;
+
+		&:first-child{
+			background: $color1;
+		}
+
+		&:nth-child(2){
+			background: $color2;
+		}
+
+		&:last-child{
+			background: $color3;
+		}
+	}
+}
+
+
+
+@mixin redondear($radio){
+	-webkit-border-radius: $radio;
+	-o-border-radius: $radio;
+	-moz-border-radius: $radio;
+	-ms-border-radius: $radio;
+	border-radius: $radio;
+}
+
+
+
+.boton{
+	display: inline-block;
+	padding: 10px 30px;
+	color: #333;
+	border: 1px solid #333; 
+	text-decoration: none;
+	font-family: $fuente-textos;
+	margin: 30px;
+	transition: 1s;
+	background: white;
+	@include redondear(5px);
+
+	&:hover{
+		transform:scale(1.1);
+		background: darken(white,20%);
+	}
+
+}
+
+
+.boton-rojo{
+	@extend .boton;
+	background: red;
+	color: white;
+	&:hover{
+		background: darken(red,20%);
+	}
+}
+
+
+.boton-verde{
+	@extend .boton;
+	background: green;
+	color: white;
+	&:hover{
+		background: darken(green,20%);
+	}
+}
+
+.boton-amarillo{
+	@extend .boton;
+	background: yellow;
+	&:hover{
+		background: darken(yellow,20%);
+	}
+}
+
+
+@mixin crear-articulo($color, $tamano){
+	width: 32%;
+	display: inline-block;
+	box-sizing: border-box;
+	padding: 10px;
+
+	img{
+		width: 100%;
+	}
+
+	h3{
+		font-family: $fuente-textos;
+		font-size: $tamano;
+		font-weight: bold;
+		color: $color;
+	}
+
+	p{
+		font-family: $fuente-textos;
+	}
+
+	a{
+		@extend .boton;
+		background: $color;
+	}
+}
+
+.tiles{
+	article{
+		&:first-child{
+			@include crear-articulo(red,20px);
+		}
+		&:nth-child(2){
+			@include crear-articulo(blue,30px);
+		}
+		&:last-child{
+			@include crear-articulo(green,40px);
+		}
+	}
+}
+
+
+
+@mixin hacer-circulo($color){
+	width: 200px;
+	height: 200px;
+	display: inline-block;
+	border-radius: 50%;
+	background: $color;
+}
+
+
+.telefe2{
+	article{
+		&:first-child{
+			@include hacer-circulo(blue);
+		}
+		&:nth-child(2){
+			@include hacer-circulo(green);
+		}
+		&:last-child{
+			@include hacer-circulo(red);
+		}
+	}
+}
+
+
+

@@ -1,0 +1,26 @@
+
+.ejemplo{
+	max-width: 30%;
+	position: relative;
+	overflow: hidden;
+}
+
+.ejemplo .placa{
+	background: rgba(0,200,0,0.5);
+	position: absolute;
+	top: 100%;
+	width: 100%;
+	height: 100%;
+	transition: 1s;
+	text-align: center;
+	padding-top: 100px;
+}
+
+.ejemplo:hover .placa{
+	top:0;
+
+}
+
+.ejemplo img{
+	width: 100%;
+}

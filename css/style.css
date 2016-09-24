@@ -1,0 +1,220 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: top; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+nav {
+  background: #55ff88; }
+  nav ul {
+    float: right; }
+    nav ul li {
+      display: inline-block;
+      margin: 0 10px; }
+      nav ul li a {
+        color: brown;
+        text-decoration: none; }
+        nav ul li a:hover {
+          color: green; }
+
+.contenedor {
+  max-width: 900px;
+  margin: auto; }
+
+header {
+  background: yellow;
+  padding: 50px 0; }
+  header h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+    text-transform: uppercase; }
+    header h1 strong {
+      color: blue; }
+  header h3 {
+    color: red; }
+  header a {
+    background: green;
+    color: white;
+    display: inline-block;
+    padding: 10px 30px;
+    text-decoration: none; }
+    header a:hover {
+      background: blue; }
+
+.seccion1 h2 {
+  text-align: center;
+  color: violet; }
+.seccion1 p {
+  display: inline-block;
+  width: 48%;
+  padding: 20px;
+  box-sizing: border-box; }
+  .seccion1 p.destacado {
+    background: yellow; }
+.seccion1 a {
+  background: #F44336;
+  display: inline-block;
+  padding: 10px 20px;
+  color: white;
+  transition: 1s; }
+  .seccion1 a:hover {
+    background: #D32F2F; }
+
+.telefe article {
+  width: 200px;
+  height: 200px;
+  display: inline-block;
+  border-radius: 50%; }
+  .telefe article:first-child {
+    background: blue; }
+  .telefe article:nth-child(2) {
+    background: green; }
+  .telefe article:last-child {
+    background: red; }
+
+.boton, .boton-rojo, .boton-verde, .boton-amarillo, .tiles article:first-child a, .tiles article:nth-child(2) a, .tiles article:last-child a {
+  display: inline-block;
+  padding: 10px 30px;
+  color: #333;
+  border: 1px solid #333;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 30px;
+  transition: 1s;
+  background: white;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px; }
+  .boton:hover, .boton-rojo:hover, .boton-verde:hover, .boton-amarillo:hover, .tiles article:first-child a:hover, .tiles article:nth-child(2) a:hover, .tiles article:last-child a:hover {
+    transform: scale(1.1);
+    background: #cccccc; }
+
+.boton-rojo {
+  background: red;
+  color: white; }
+  .boton-rojo:hover {
+    background: #990000; }
+
+.boton-verde {
+  background: green;
+  color: white; }
+  .boton-verde:hover {
+    background: #001a00; }
+
+.boton-amarillo {
+  background: yellow; }
+  .boton-amarillo:hover {
+    background: #999900; }
+
+.tiles article:first-child {
+  width: 32%;
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 10px; }
+  .tiles article:first-child img {
+    width: 100%; }
+  .tiles article:first-child h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: red; }
+  .tiles article:first-child p {
+    font-family: Arial, Helvetica, sans-serif; }
+  .tiles article:first-child a {
+    background: red; }
+.tiles article:nth-child(2) {
+  width: 32%;
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 10px; }
+  .tiles article:nth-child(2) img {
+    width: 100%; }
+  .tiles article:nth-child(2) h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    color: blue; }
+  .tiles article:nth-child(2) p {
+    font-family: Arial, Helvetica, sans-serif; }
+  .tiles article:nth-child(2) a {
+    background: blue; }
+.tiles article:last-child {
+  width: 32%;
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 10px; }
+  .tiles article:last-child img {
+    width: 100%; }
+  .tiles article:last-child h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    color: green; }
+  .tiles article:last-child p {
+    font-family: Arial, Helvetica, sans-serif; }
+  .tiles article:last-child a {
+    background: green; }
+
+.telefe2 article:first-child {
+  width: 200px;
+  height: 200px;
+  display: inline-block;
+  border-radius: 50%;
+  background: blue; }
+.telefe2 article:nth-child(2) {
+  width: 200px;
+  height: 200px;
+  display: inline-block;
+  border-radius: 50%;
+  background: green; }
+.telefe2 article:last-child {
+  width: 200px;
+  height: 200px;
+  display: inline-block;
+  border-radius: 50%;
+  background: red; }
+
+/*# sourceMappingURL=style.css.map */

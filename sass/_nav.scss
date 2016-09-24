@@ -1,0 +1,18 @@
+nav{
+	background: $color-secundario;
+
+	ul{
+		float: right;
+		li{
+			display: inline-block;
+			margin: 0 10px;
+			a{
+				color: brown;
+				text-decoration: none;
+				&:hover{
+					color: green;
+				}
+			}
+		}
+	}
+}
